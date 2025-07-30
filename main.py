@@ -76,29 +76,31 @@ TASK_IDS = [
 ]
 
 if __name__ == "__main__":
-    evidence = "https://x.com/unich_com/status/1941450264764088565"
+    try:
+        evidence = "https://x.com/unich_com/status/1941450264764088565"
 
-    # ✅ Pertama kali: jalankan task untuk semua akun
-    for token in TOKENS:
-        print("\n" + "=" * 50)
-        print(f"🔑 LOGIN AKUN: {token[:30]}...")
+        # ✅ Pertama kali: jalankan task untuk semua akun
+        for token in TOKENS:
+            print("\n" + "=" * 50)
+            print(f"🔑 LOGIN AKUN: {token[:30]}...")
 
-        headers = {
-            "Authorization": token,
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-        }
+            headers = {
+                "Authorization": token,
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            }
 
-        my_info(headers)
+            my_info(headers)
 
-        for task_id in TASK_IDS:
-            claim_task(headers, task_id, evidence)
-            time.sleep(1)  # jeda aman
+            for task_id in TASK_IDS:
+                claim_task(headers, task_id, evidence)
+                time.sleep(1)  # jeda aman
 
-        # Mining pertama kali
-        mining(headers)
+            # Mining pertama kali
+            mining(headers)
 
-    print("\n✅ Semua akun selesai klaim task dan mining pertama kali!")
-
-    # ✅ Mulai loop harian hanya untuk mining
-    ulang()
+        print("\n✅ Semua akun selesai klaim task dan mining pertama kali!")
+        # ✅ Mulai loop harian hanya untuk mining
+        ulang()
+    except KeyboardInterrupt:
+        print("\n❌ Proses dihentikan oleh pengguna.")
