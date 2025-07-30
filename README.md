@@ -19,7 +19,7 @@ Bot ini dibuat untuk membantu **hunter airdrop** menjalankan **mining otomatis s
 
 project-folder/  
 ├── tokens.txt   # daftar token akun (1 token per baris)  
-├── unich_auto.py   # script utama bot  
+├── main.py   # script utama bot  
 
 ---
 
