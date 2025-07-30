@@ -10,7 +10,7 @@ Bot ini dibuat untuk membantu **hunter airdrop** menjalankan **mining otomatis s
 - ✅ **Klaim task hanya dilakukan sekali saat pertama kali menjalankan bot**  
 - ⏳ **Mining otomatis** semua akun setiap 24 jam  
 - 🚫 **Tidak ada pengulangan task** (hanya mining yang diulang)  
-- 📊 **Cek poin (`mUn`) tiap akun** sebelum eksekusi  
+- 📊 **Cek poin tiap akun** sebelum eksekusi  
 - 🛡️ **Delay aman** untuk menghindari rate limit & banned  
 
 ---
